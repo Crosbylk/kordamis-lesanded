@@ -1,0 +1,25 @@
+/* ül4  */
+bool Kaks = true;
+int summa = 0;
+string kasutajaV = string.Empty;
+Console.WriteLine("Kui suur on teie summa mida soovite investeerida?");
+kasutajaV = Console.ReadLine();
+List<string> valikud2 = new List<string>() { "Tesla", "Transferwise", "Macro$lop" };
+
+while (Kaks == true)
+{
+    do
+    {
+        Console.WriteLine("Millisesse firmasse soovite investeerida? Tesla, Transferwise või Macro$lop?");
+        kasutajaV = Console.ReadLine();
+    });
+
+    if (kasutajaV == "Tesla")
+    {
+       
+        kasutajaV *= -1.15;
+        summa = int.Parse(Console.ReadLine());
+
+    }
+
+}
