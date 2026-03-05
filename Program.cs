@@ -387,8 +387,56 @@ namespace _1_Tänavanimed
 						}
 					} while (string.IsNullOrEmpty(sisestus));
 					return töödeldudsisestus;
+
+						// on meetod mis kuvab kasutajale ühe sõnumi 
+	KuvaSõnum();
+	// on meetod, mis tahab teada kui palav õues on
+	KuiPalavOn(0);
+
+	// on meetod mis arvutab j2rjendi k6ikide elementide keskmise, hoiab muutujas meeles ja kuvab eraldi real v2lja peaprogrammis, mitte meetodis, meetod ainult tagastab v22rtuse.
+	double scores = ArvutaKeskmine(new List<double> { 3.5 , 7.7, 1.1 , 5, 8, 9.2});
+    Console.WriteLine(" Keskmine skoor on: "+scores);
+}
+
+ public static double ArvutaKeskmine(List <double> andmed)
+{
+	double keskmine = 0;
+	for (int i =0; i <andmed.Count; i++)
+	{
+		keskmine += andmed[i];
+	}
+	keskmine /= andmed.Count;
+	KuiPalavOn(keskmine);
+
+	return keskmine; 
+}
+
+
+public static void KuiPalavOn(double temp)
+{
+	if (temp < 0 && temp > -50)
+	{
+		Console.WriteLine("Kylm blyat");
+	}
+	else if (temp > 0 && temp <= 15)
+	{
+		Console.WriteLine("jahe");
+	}
+	else if (temp > 15 && temp <= 25)
+	{
+		Console.WriteLine("Paris soe");
+	}
+	else if (temp > 25 && temp <= 40)
+	{
+		Console.WriteLine("Palav blyat");
+	}
+	else
+	{
+		Console.WriteLine(" Ur ded");
+	}
 				}
 			}
 		}
 	
 		
+
